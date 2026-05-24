@@ -144,24 +144,137 @@ E --> H[Learning Resources]
 ---
 
 ## Quick Start
-
+### Linux/macOS Setup
 ```bash
 git clone https://github.com/komalharshita/devpath.git
 cd devpath
-python -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
+
+python3 -m venv venv
+source venv/bin/activate
+
 pip install -r requirements.txt
+
 python app.py
 ```
 
-**http://127.0.0.1:5000** — that is the entire setup.
+### Windows Setup
+```powershell
+git clone https://github.com/komalharshita/devpath.git
+cd devpath
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+```
+### Verify Everything Works
+
+Run the test suite:
 
 ```bash
-# Verify everything works
 python tests/test_basic.py
-# 27 passed, 0 failed out of 27 tests
 ```
 
+Expected output:
+
+```bash
+27 passed, 0 failed
+```
+
+
+
+
+---
+## Troubleshooting
+### Virtual Environment Activation Issues
+#### Linux/macOS
+
+If `source venv/bin/activate` does not work:
+
+- Ensure the virtual environment was created successfully
+- Check whether Python 3 is installed:
+
+```bash
+python3 --version
+```
+
+
+
+#### Windows PowerShell
+
+If you see:
+
+```powershell
+running scripts is disabled on this system
+```
+
+Run PowerShell as Administrator and execute:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
+Then try activating again:
+
+```powershell
+venv\Scripts\activate
+```
+### Dependency Installation Problems
+If `pip install -r requirements.txt` fails:
+
+### Upgrade pip
+
+```bash
+python -m pip install --upgrade pip
+```
+
+### Check Python Version
+
+Ensure Python 3.9+ is installed:
+
+```bash
+python --version
+```
+
+### Reinstall Requirements
+
+```bash
+pip install -r requirements.txt --no-cache-dir
+```
+### Flask Setup Issues
+If you see:
+
+```bash
+ModuleNotFoundError: No module named 'flask'
+```
+
+Install dependencies again:
+
+```bash
+pip install -r requirements.txt
+```
+
+If Flask still does not run:
+
+```bash
+pip install flask
+```
+### Port Already in Use
+If you see:
+
+```bash
+Address already in use
+```
+
+Run the application on another port:
+
+```bash
+flask run --port 5001
+```
+
+Or stop the process using port 5000.
 ---
 
 ## Project Structure
