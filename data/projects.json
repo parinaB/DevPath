@@ -310,6 +310,74 @@
       "Real Python API guide: https://realpython.com/api-integration-in-python/"
     ],
     "starter_code": "starter_code/api_data_pipeline.py"
+  },
+  {
+    "id": 10,
+    "title": "API ETL Pipeline",
+    "skills": ["Python", "pandas", "requests"],
+    "level": "Intermediate",
+    "interest": "Data",
+    "time": "Medium",
+    "description": "Enter a public API URL to fetch data and automatically transform it into a structured CSV dataset.",
+    "features": [
+      "Fetch data from public APIs",
+      "handle missing values",
+      "Normalize nested JSON",
+      "Generate summary statistics",
+      "Export the processed CSV for any other Analytics projects"
+    ],
+    "tech_stack": ["Python", "pandas", "requests", "JSON"],
+    "roadmap": [
+      "Step 1: Install required modules via pip",
+      "Step 2: Find a public API key for this project",
+      "Step 3: Fetch the data from the API using requests",
+      "Step 4: Validate the response you just fetched From the API",
+      "Step 5: Normalize the nested JSON data by flattening it",
+      "Step 6: Use the fetched data to build a pandas dataframe",
+      "Step 7: Handle missing values or duplicate values",
+      "Step 8: Export the cleaned dataset to CSV format",
+      "Step 9: Generate a summary for the newly created CSV dataset",
+      "Step 10: Test the file with at least two different public APIs"
+    ],
+    "resources": [
+      "pandas docs: https://pandas.pydata.org/docs",
+      "requests docs: https://requests.readthedocs.io/en/latest/",
+      "JSON handling in Python: https://docs.python.org/3/library/json.html",
+      "REST API tutorial: https://restfulapi.net/",
+      "Real Python API guide: https://realpython.com/api-integration-in-python/"
+    ],
+    "starter_code": "starter_code/api_data_pipeline.py"
+  },
+  {
+    "id": 11,
+    "title": "Secure Crypto Vault",
+    "skills": ["Python"],
+    "level": "Intermediate",
+    "interest": "Cybersecurity",
+    "time": "Medium",
+    "description": "A professional-grade CLI utility for storing sensitive credentials using industry-standard AES-256-GCM encryption. Teaches cryptography basics and secure key derivation.",
+    "features": [
+      "Encrypt and store passwords securely",
+      "PBKDF2 key derivation for master passwords",
+      "Authenticated encryption (AES-GCM)",
+      "JSON-based local data persistence"
+    ],
+    "tech_stack": ["Python", "Cryptography library", "JSON", "base64"],
+    "roadmap": [
+      "Step 1: Set up a virtual environment and install cryptography",
+      "Step 2: Implement PBKDF2 for secure master key generation",
+      "Step 3: Build the AES-GCM encryption/decryption logic",
+      "Step 4: Create functions to save/load the encrypted vault file",
+      "Step 5: Build a secure CLI menu for adding/viewing entries",
+      "Step 6: Implement salt and nonce handling for high security",
+      "Step 7: Test with multiple service entries and verify decryption"
+    ],
+    "resources": [
+      "Python Cryptography docs: https://cryptography.io/en/latest/",
+      "OWASP Key Derivation: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "Real Python Security: https://realpython.com/python-api-key-setup-and-usage/"
+    ],
+    "starter_code": "starter_code/secure_vault.py"
   }
 ]
 
